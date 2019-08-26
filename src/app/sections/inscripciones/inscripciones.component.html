@@ -1,0 +1,50 @@
+<div class="centrado">
+
+  <div class="jumbotron">
+    <div class="form-theme">
+
+      <h1>Introducir alumnos</h1>
+
+      <div class="col-style marginal">
+          <div class="row-style" *ngIf="alumnosServiceService.resultado">
+            <div class="col-style alert alert-success">
+              <h4>¡Inscrito correctamente!</h4>
+              <p>Rellene los campos de nuevo para inscribir a otro alumno.</p>
+            </div>
+          </div>
+        </div>
+
+      <form #myForm>
+        <label>
+          <input type='text' name="alumnoDNI" class='form-control'
+          [placeholder]='alumnosServiceService.placeholders.alumnoDNI' [(ngModel)]='alumnosServiceService.dni'>
+        </label>
+        <div class='alerts'>
+          <div *ngIf='alumnosServiceService.dni.length < 9'>
+            <div class="text-error">Campo obligatorio. Mínimo 9 caracteres.</div>
+          </div>
+        </div>
+        <label>
+          <input type='text' name="alumnoName" class='form-control'
+          [placeholder]='alumnosServiceService.placeholders.alumnoName' [(ngModel)]='alumnosServiceService.nombre'>
+        </label>  
+        <div class='alerts'>
+          <div *ngIf='alumnosServiceService.nombre.length < 1 '>
+            <div class="text-error">Campo obligatorio.</div>
+          </div>
+        </div>
+        <label>
+        <input type='button' (click)='alumnosServiceService.checkRecord()' class='btn btn-primary'
+        #sendButton value ='Aceptar'>
+        </label>
+      </form>
+
+      <ng-container *ngIf='alumnosServiceService.dni !== "" && alumnosServiceService.nombre !== ""; else noValido'>
+        Formulario correcto.</ng-container>
+      <ng-template #noValido><p>Ambos campos deben ser completados.</p></ng-template>
+
+    </div>
+  </div>
+
+</div>
+

@@ -1,0 +1,13 @@
+.jumbotron{
+    background-color: white;
+
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+.text
+{
+    text-align: center;
+    font-size: 16px;
+}

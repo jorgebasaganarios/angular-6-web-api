@@ -1,0 +1,13 @@
+.jumbotron{
+    background-color: white;
+}
+
+.form-theme
+{
+    padding: 0 80px 20px 80px;
+    /*float: left;*/
+}
+
+.footer-text{
+    font-size: 22px;
+}

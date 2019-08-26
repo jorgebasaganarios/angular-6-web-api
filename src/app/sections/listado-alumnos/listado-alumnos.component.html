@@ -1,0 +1,30 @@
+<div class="jumbotron">
+  <div class="form-theme">
+
+    <h1>Lista de alumnos</h1>
+    <br>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">DNI</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Acción</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let alumnoItem of alumnosServiceService.arrayAlumnos">        
+          <tr>
+            <td>{{ alumnoItem.id }}</td>
+            <td>{{ alumnoItem.dni }}</td>
+            <td>{{ alumnoItem.nombre }}</td>
+            <td><input type="button" (click)="alumnosServiceService.deleteRecord(alumnoItem.id)" class="btn btn-danger btn-xs" value="X"></td>
+          </tr>          
+        </tbody>
+      </table>
+
+      <div class="footer-text">
+          <strong>Número de alumnos registrados: {{ alumnosServiceService.alumnosRegistrados }} alumnos</strong>
+      </div>
+
+  </div>
+</div>  

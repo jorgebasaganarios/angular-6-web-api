@@ -1,0 +1,13 @@
+.jumbotron {
+    margin-bottom: 0px !important;
+    padding: 2rem 2rem;
+}
+
+.date{
+    float: right;
+    font-size: 12px;
+}
+
+.logo-header{
+    margin-top: -12px;
+}

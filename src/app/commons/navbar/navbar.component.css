@@ -1,0 +1,32 @@
+.navbar-nav {
+    flex-direction: unset !important;
+    position: relative;
+    left: 50%;
+    transform: translatex(-50%);
+}
+.nav-link {
+    padding-left: 25% !important;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+a:hover {
+    color: wheat;
+}
+
+.navbar {
+    text-align: center !important;
+}
+
+.navbar-nav .nav-link {
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+    background-color: brown;
+    /*text-align: center !important;
+    margin: auto 0; */
+}
+
+.navbar-default{
+    background-color: brown;
+}
