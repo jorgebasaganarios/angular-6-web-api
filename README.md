@@ -1,4 +1,4 @@
-# PruebaAngularApp8
+# angular-6-web-api
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.4.
 
